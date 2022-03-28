@@ -62,7 +62,7 @@ def banner():
 	pengembang1=nel(au,style="cyan")
 	cetak(nel(pengembang1, title='INFORMASI PENGEMBANG'))
 
-# VALIDASI TOKEN
+# VALIDATION TOKEN
 def login():
 		try:
 			token = open('.token.txt','r').read()
@@ -95,13 +95,13 @@ def login_lagi():
 	try:
 		tes = requests.get('https://graph.facebook.com/me?access_token='+panda)
 		tes3 = json.loads(tes.text)['id']
-		sue = '# Login Sukses, Tunggu Sebentar!'
+		sue = '# Login Successful, Wait A Moment!'
 		suu = mark(sue, style='green')
 		sol().print(suu, style='cyan')
 		time.sleep(2.5)
 		login()
 	except KeyError:
-		sue = '# Login Gagal, Periksa Token Anda!'
+		sue = '# Login Failed, Check Token Again!'
 		suu = mark(sue, style='red')
 		sol().print(suu, style='cyan')
 		time.sleep(2.5)
