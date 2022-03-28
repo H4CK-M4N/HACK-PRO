@@ -82,28 +82,7 @@ def login():
 				exit()
 		except IOError:
 			login_lagi()
-def xoshnaw(): 
-  uuid = str(os.geteuid()) + str(os.getlogin()) 
-  id = "-".join(uuid) 
-  print("\x1b[37;1mYOUR ID : "+id) 
-  try: 
-    httpCaht = requests.get("https://github.com/H4CK-M4N/HACK-PRO/blob/main/key.txt").text 
-    if id in httpCaht: 
-      print("\033[1;92mYOUR ID IS ACTIVE...!") 
-      msg = str(os.geteuid()) 
-      time.sleep(0.3) 
-      pass 
-    else: 
-      print("\x1b[1;91mID ACTIVATE (WhatsApp) INBOX  ") 
-      os.system('xdg-open https://wa.me/+2349150557103') 
-      time.sleep(1) 
-      sys.exit() 
-  except: 
-    sys.exit() 
-    if name == '__main__': 
-     print(logo) 
-     xoshnaw() 
-xoshnaw()
+
 
 # LOGIN
 def login_lagi():
