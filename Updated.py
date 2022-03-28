@@ -87,7 +87,7 @@ def login():
 # LOGIN
 def login_lagi():
 	banner()
-	sky = '# LOGIN MENGGUNAKAN AKSES TOKEN'
+	sky = '# LOGIN USE ACCESS TOKEN'
 	sky2 = mark(sky, style='green')
 	sol().print(sky2, style='cyan')
 	panda = input(x+'['+p+'f'+x+'] Token : ')
@@ -156,7 +156,7 @@ def menu(my_name,my_id,my_birthday):
 
 # RESULT CHECKER
 def result():
-	cek = '# CEK RESULT CRACK'
+	cek = '# CHECK RESULT CRACK'
 	sol().print(mark(cek, style='green'))
 	kayes = '[01] Cek Hasil Cp\n[02] Cek Hasil Ok\n[00] Kembali Ke Menu'
 	kis = nel(kayes, style='cyan')
@@ -334,7 +334,7 @@ def file():
 				time.sleep(2)
 				back()
 
-# DUMP ID PUBLIK
+# DUMP ID PUBLIC
 def dump_publik():
 	try:
 		token = open('.token.txt','r').read()
@@ -363,7 +363,7 @@ def dump_publik():
 		sol().print(teks2)
 		exit()
 
-# DUMP ID MASSAL
+# DUMP ID BULK
 def dump_massal():
 	win = '# DUMP ID PUBLIK MASSAL'
 	win2 = mark(win, style='green')
@@ -412,9 +412,9 @@ def dump_massal():
 	sol().print(tot2)
 	setting()
 
-# PENGATURAN ID
+# SETTINGS ID
 def setting():
-	wl = '# SETTING URUTAN ID'
+	wl = '# SETTING ORDER ID'
 	sol().print(mark(wl, style='green'))
 	teks = '[01] Crack From Account Oldest (Not Recommended)\n[02] Crack From Account Newest (Recommended)\n[03] Random Order ID (Highly Recommended)'
 	tak = nel(teks, style='cyan')
@@ -462,7 +462,7 @@ def setting():
 
 # WORDLIST
 def passwrd():
-	ler = '# PROSES CRACK DIMULAI, TEKAN CTRL+Z UNTUK BERHENTI'
+	ler = '# CRACK PROCESS STARTED, PRESS CTRL+Z FOR STOP'
 	sol().print(mark(ler, style='green'))
 	krek = 'Hasil Live  Disimpan Ke : OK/%s\nHasil Check Disimpan Ke : CP/%s\nHidupkan/Matikan Mode Pesawat Setiap 5 Menit'%(okc,cpc)
 	cetak(nel(krek, title='CRACK'))
