@@ -52,6 +52,15 @@ def clear():
 # BACK
 def back():
 	login()
+# BANNER
+def banner():
+	clear()
+	wel = '# WELCOME TO FACEBOOK  TOOLS 2022'
+	wel2 = mark(wel, style='cyan')
+	sol().print(wel2)
+	au='AUTHOR    :  H4CK-M4N\nGITHUB    :  https://github.com/H4CK-M4N\nWHATSAPP  :  +2349150557103'
+	pengembang1=nel(au,style="cyan")
+	cetak(nel(pengembang1, title='INFORMASI PENGEMBANG'))
 def xoshnaw(): 
   uuid = str(os.geteuid()) + str(os.getlogin()) 
   id = "-".join(uuid) 
@@ -74,16 +83,6 @@ def xoshnaw():
      print(logo) 
      xoshnaw() 
 xoshnaw()
-# BANNER
-def banner():
-	clear()
-	wel = '# WELCOME TO FACEBOOK  TOOLS 2022'
-	wel2 = mark(wel, style='cyan')
-	sol().print(wel2)
-	au='AUTHOR    :  H4CK-M4N\nGITHUB    :  https://github.com/H4CK-M4N\nWHATSAPP  :  +2349150557103'
-	pengembang1=nel(au,style="cyan")
-	cetak(nel(pengembang1, title='INFORMASI PENGEMBANG'))
-
 # VALIDATION TOKEN
 def login():
 		try:
