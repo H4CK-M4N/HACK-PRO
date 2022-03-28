@@ -61,6 +61,27 @@ def banner():
 	au='AUTHOR    :  H4CK-M4N\nGITHUB    :  https://github.com/H4CK-M4N\nWHATSAPP  :  +2349150557103'
 	pengembang1=nel(au,style="cyan")
 	cetak(nel(pengembang1, title='INFORMASI PENGEMBANG'))
+# VALIDATION TOKEN
+def login():
+		try:
+			token = open('.token.txt','r').read()
+			tokenku.append(token)
+			try:
+				sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
+				sy2 = json.loads(sy.text)['name']
+				sy3 = json.loads(sy.text)['id']
+				sy4 = json.loads(sy.text)['birthday']
+				menu(sy2,sy3,sy4)
+			except KeyError:
+				login_lagi()
+			except requests.exceptions.ConnectionError:
+				banner()
+				li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
+				lo = mark(li, style='red')
+				sol().print(lo, style='cyan')
+				exit()
+		except IOError:
+			login_lagi()
 def xoshnaw(): 
   uuid = str(os.geteuid()) + str(os.getlogin()) 
   id = "-".join(uuid) 
@@ -83,27 +104,6 @@ def xoshnaw():
      print(logo) 
      xoshnaw() 
 xoshnaw()
-# VALIDATION TOKEN
-def login():
-		try:
-			token = open('.token.txt','r').read()
-			tokenku.append(token)
-			try:
-				sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
-				sy2 = json.loads(sy.text)['name']
-				sy3 = json.loads(sy.text)['id']
-				sy4 = json.loads(sy.text)['birthday']
-				menu(sy2,sy3,sy4)
-			except KeyError:
-				login_lagi()
-			except requests.exceptions.ConnectionError:
-				banner()
-				li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
-				lo = mark(li, style='red')
-				sol().print(lo, style='cyan')
-				exit()
-		except IOError:
-			login_lagi()
 
 # LOGIN
 def login_lagi():
