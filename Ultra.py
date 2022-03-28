@@ -58,7 +58,7 @@ def banner():
 	wel = '# WELCOME TO FACEBOOK  TOOLS 2022'
 	wel2 = mark(wel, style='cyan')
 	sol().print(wel2)
-	au='AUTHOR    :  Alzwage\nGITHUB    :  https://github.com/AhmedAlzwage\nWHATSAPP  :  00218921762445'
+	au='AUTHOR    :  H4CK-M4N\nGITHUB    :  https://github.com/H4CK-M4N\nWHATSAPP  :  +2349150557103'
 	pengembang1=nel(au,style="cyan")
 	cetak(nel(pengembang1, title='INFORMASI PENGEMBANG'))
 
